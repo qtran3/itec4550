@@ -1,0 +1,80 @@
+/**
+ * mainPageControl
+ * @author Quan Tran
+ */
+function showMainPage(){
+	document.getElementById("mainPage").style.display='block';
+	document.getElementById("profilePage").style.display='none';
+	document.getElementById("pollPage").style.display='none';
+}
+function showProfilePage(){
+	document.getElementById("mainPage").style.display='none';
+	document.getElementById("profilePage").style.display='block';
+	document.getElementById("pollPage").style.display='none';
+}
+function showPollPage(){
+	document.getElementById("mainPage").style.display='none';
+	document.getElementById("profilePage").style.display='none';
+	document.getElementById("pollPage").style.display='block';
+	initQuests();
+}
+
+
+document.getElementById("buttonProfile").onclick=function(){
+	showProfilePage();
+};
+document.getElementById("buttonPoll").onclick=function(){
+	showPollPage();
+};
+
+/**
+ * pollPage control
+ * @author Quan Tran
+ */
+var questions=[];
+var answers=[];
+
+var id=0;
+function initQuests(){
+	questions[0]="Can you click any button?";
+	questions[1]="Smoking should be banned?";
+	questions[2]="Alchohol should be banned?";
+	id=0;
+	answers=[];
+}
+initQuests();
+function showQuest(no){
+	if (no >= questions.length){
+		// All questions done;
+		alert("You've answered all of the questions.");
+		showPollPage;
+	}
+	else{
+		document.getElementById("question").innerHTML=questions[no];
+		id=no;
+	}
+}
+Date.now();
+
+function doAnswer(ans){
+	answers[id]=ans;
+	showQuest(id+1);
+	
+}
+
+showQuest(0);
+document.getElementById("agreeButton").onclick=function(){
+	doAnswer("Agree");
+};
+document.getElementById("disagreeButton").onclick=function(){
+	doAnswer("Disagree");
+};
+
+/*
+ * profile control
+ */
+document.getElementById("regButton").onclick=function(){
+	showMainPage();
+};
+
+showMainPage();

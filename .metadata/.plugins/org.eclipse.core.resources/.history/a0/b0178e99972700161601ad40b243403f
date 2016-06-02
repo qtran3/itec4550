@@ -1,0 +1,113 @@
+/**
+ * mainPageControl
+ * @author Quan Tran
+ */
+function showMainPage(){
+	document.getElementById("mainPage").style.display='block';
+	document.getElementById("profilePage").style.display='none';
+	document.getElementById("pollPage").style.display='none';
+}
+function showProfilePage(){
+	document.getElementById("mainPage").style.display='none';
+	document.getElementById("profilePage").style.display='block';
+	document.getElementById("pollPage").style.display='none';
+}
+function showPollPage(){
+	document.getElementById("mainPage").style.display='none';
+	document.getElementById("profilePage").style.display='none';
+	document.getElementById("pollPage").style.display='block';
+	initQuests();
+}
+
+
+document.getElementById("buttonProfile").onclick=function(){
+	showProfilePage();
+};
+document.getElementById("buttonPoll").onclick=function(){
+	showPollPage();
+};
+
+/*
+ * profile control
+ */
+document.getElementById("regButton").onclick=function(){
+	showMainPage();
+};
+
+function firstName(){
+	return document.getElementById("firstNameField").value;
+}
+function lastName(){
+	return document.getElementById("lastNameField").value;
+}
+function email(){
+	return document.getElementById("emailField").value;
+}
+function name(){
+	return firstName()+" "+lastName();
+}
+function validity(){
+	return ((firstName())&&(lastName()));
+}
+
+if (validity()==false){
+	document.getElementById("buttonPoll").
+}
+/**
+ * pollPage control
+ */
+var questions=[];
+var answers=[];
+
+var id=0;
+function initQuests(){
+	questions[0]="Can you click any button?";
+	questions[1]="Smoking should be banned?";
+	questions[2]="Alchohol should be banned?";
+	id=0;
+	answers=[];
+}
+initQuests();
+function showQuest(no){
+	if (no >= questions.length){
+		// All questions done;
+		alert("You've answered all of the questions.");
+		showMainPage();
+	}
+	else{
+		document.getElementById("question").innerHTML=questions[no];
+		id=no;
+		if (no >= questions.length){
+			// All questions done;
+			alert("You've answered all of the questions.");
+			showMainPage();
+		}
+	}	
+}
+function getTimeStamp() {
+    var now = new Date();
+    return ((now.getMonth() + 1) + '/' 
+    		+(now.getDate()) + '/' 
+    		+now.getFullYear() + " " 
+    		+now.getHours() + ':' 
+    		+((now.getMinutes() < 10) ? ("0" + now.getMinutes()):(now.getMinutes())) + ':' 
+            +((now.getSeconds() < 10)?("0" + now.getSeconds()):(now.getSeconds())));
+}
+
+function doAnswer(ans){
+	answers[id]=ans;
+	showQuest(id+1);
+	alert(name()+"("+email+") entered "+ ans +" at "+ getTimeStamp()+".");
+}
+
+
+showQuest(0);
+document.getElementById("agreeButton").onclick=function(){
+	doAnswer("Agree");
+};
+document.getElementById("disagreeButton").onclick=function(){
+	doAnswer("Disagree");
+};
+
+// start up
+showMainPage();

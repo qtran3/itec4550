@@ -1,0 +1,37 @@
+/**
+ * @author Quan Tran
+ */
+var questions=[];
+var answers=[];
+questions[0]="Can you click any button?";
+var id=0;
+function initQuests(){
+	questions[1]="Smoking should be banned?";
+	questions[2]="Alchohol should be banned?";
+}
+initQuests();
+function showQuest(no){
+	if (no>=questions.length){
+		// All questions done;
+		alert("You've answered all of the questions.");
+		window.location.replace("index.html");
+	}
+	else{
+		document.getElementById("question").innerHTML=question[no];
+		id=no;
+	}
+}
+function doAnswer(ans){
+	answers[id]=ans;
+	showQuest(id+1);
+	
+}
+
+showQuest(0);
+document.getElementById("agreeButton").onclick=function(){
+	doAnswer("Agree");
+};
+document.getElementById("disagreeButton").onclick=function(){
+	doAnswer("Disagree");
+};
+ 

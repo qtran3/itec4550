@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="ema" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="ema"/>
+			<item value="em"/>
+			<item value="logo"/>
+			<item value="reg"/>
+			<item value="&#x09;document.getElementById(&quot;pollPage&quot;).style.display=&apos;none&apos;;&#x0A;"/>
+			<item value="pollB"/>
+			<item value="name"/>
+			<item value="pollP"/>
+		</list>
+	</section>
+</section>

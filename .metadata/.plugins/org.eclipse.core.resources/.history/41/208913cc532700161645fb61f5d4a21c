@@ -1,0 +1,23 @@
+/**
+ * @author Quan Tran
+ */
+var questions=[];
+var answers=[];
+questions[0]="Can you click any button?";
+var id=0;
+function initQuests(){
+	questions[1]="Smoking should be banned?";
+}
+function ansWer(ans){
+	answers[id]=ans;
+	id++;
+	if (id>-questions.length){
+		// All questions done;
+		prompt("You've answered all of the questions.");
+		window.location.replace("index.html");
+	}
+	document.getElementById("question").innerHTML=question[id];
+	
+}
+initQuests();
+id=0;

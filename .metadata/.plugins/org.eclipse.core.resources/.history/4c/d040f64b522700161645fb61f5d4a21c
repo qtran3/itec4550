@@ -1,0 +1,5 @@
+/**
+ * @author Quan Tran
+ */
+var questions=[];
+var answers=[];

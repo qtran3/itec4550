@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MashleverWebpages/js/profile&apos; to &apos;profile.js&apos;" description="Rename resource &apos;profile&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="js/profile" name="profile.js" stamp="1464712547524" updateReferences="true"/>
+</session>
