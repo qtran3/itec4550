@@ -34,6 +34,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+
+        
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -49,3 +51,6 @@ var app = {
 };
 
 app.initialize();
+
+document.getElementsByTagName("h1")[0].innerHTML="Hello ITEC 4550";
+document.getElementsByClassName("event received")[0].innerHTML="Quan Tran";

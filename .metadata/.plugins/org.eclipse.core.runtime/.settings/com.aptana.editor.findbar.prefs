@@ -1,2 +1,2 @@
-FIND_BAR_DECORATOR_FIND_ENTRIES=\#\r\n\#Tue May 31 22\:14\:34 EDT 2016\r\n6\=name\r\n5\=pollB\r\n4\=\\tdocument.getElementById("pollPage").style.display\\\='none';\\n\r\n3\=reg\r\n2\=logo\r\n1\=em\r\n0\=ema\r\n7\=pollP\r\n
+FIND_BAR_DECORATOR_FIND_ENTRIES=\#\r\n\#Thu Jun 02 12\:42\:38 EDT 2016\r\n8\=pollP\r\n7\=name\r\n6\=pollB\r\n5\=\\tdocument.getElementById("pollPage").style.display\\\='none';\\n\r\n4\=reg\r\n3\=logo\r\n2\=em\r\n1\=ema\r\n0\=inner\r\n
 eclipse.preferences.version=1
